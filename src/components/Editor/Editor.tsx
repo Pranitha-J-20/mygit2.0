@@ -6,9 +6,10 @@ interface EditorProps {
   content: string;
   language?: string;
   onChange: (value: string) => void;
+  fileName?: string;
 }
 
-const CodeEditor: React.FC<EditorProps> = ({ content, language = 'javascript', onChange }) => {
+const CodeEditor: React.FC<EditorProps> = ({ content, language = 'javascript', onChange, fileName }) => {
   const handleChange = (value: string | undefined) => {
     if (value !== undefined) {
       onChange(value);

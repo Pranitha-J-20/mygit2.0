@@ -4,4 +4,5 @@ export interface File {
   name: string;
   type: 'file' | 'directory';
   language?: string;
+  content?: string;
 }
